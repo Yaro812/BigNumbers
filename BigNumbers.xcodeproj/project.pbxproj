@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6DC06F59206D2D1E006EE570 /* BigNumbers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC06F57206D2D1E006EE570 /* BigNumbers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DC06F61206D2D84006EE570 /* SMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC06F60206D2D84006EE570 /* SMP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6DC06F54206D2D1E006EE570 /* BigNumbers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigNumbers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC06F57206D2D1E006EE570 /* BigNumbers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigNumbers.h; sourceTree = "<group>"; };
 		6DC06F58206D2D1E006EE570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DC06F60206D2D84006EE570 /* SMP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,19 @@
 		6DC06F56206D2D1E006EE570 /* BigNumbers */ = {
 			isa = PBXGroup;
 			children = (
+				6DC06F5F206D2D30006EE570 /* Sources */,
 				6DC06F57206D2D1E006EE570 /* BigNumbers.h */,
 				6DC06F58206D2D1E006EE570 /* Info.plist */,
 			);
 			path = BigNumbers;
+			sourceTree = "<group>";
+		};
+		6DC06F5F206D2D30006EE570 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6DC06F60206D2D84006EE570 /* SMP.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +106,7 @@
 				TargetAttributes = {
 					6DC06F53206D2D1E006EE570 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DC06F61206D2D84006EE570 /* SMP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +266,7 @@
 		6DC06F5D206D2D1E006EE570 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +280,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.spb.thorax.BigNumbers;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +289,7 @@
 		6DC06F5E206D2D1E006EE570 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
